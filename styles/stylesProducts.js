@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-const stylesProducts = StyleSheet.create({
+const stylesProduct = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
@@ -12,14 +12,18 @@ const stylesProducts = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
     shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 5,
+    shadowOpacity: 0.2, // Aumenta la opacidad para un efecto más pronunciado
+    shadowOffset: { width: 0, height: 4 }, // Ajusta el desplazamiento de la sombra
+    shadowRadius: 10, // Ajusta el difuminado de la sombra
+    elevation: 5, // Aumenta la elevación para una mejor apariencia en Android
   },
   productImage: {
     width: '100%',
-    height: 150,
+    height: 300,
     borderRadius: 10,
+    resizeMode: 'cover',
+    borderWidth: 1,
+    borderColor: 'transparent',
   },
   productName: {
     fontSize: 18,
@@ -34,4 +38,4 @@ const stylesProducts = StyleSheet.create({
   },
 });
 
-export default stylesProducts;
+export default stylesProduct;

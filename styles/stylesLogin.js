@@ -11,8 +11,8 @@ const stylesLogin = StyleSheet.create({
   logo: {
     width: 150,
     height: 150,
-    marginBottom: 30,
-    borderRadius: 50,
+    marginBottom: 20,
+    borderRadius: 75,
   },
   title: {
     fontSize: 24,
@@ -30,8 +30,21 @@ const stylesLogin = StyleSheet.create({
     marginBottom: 15,
     backgroundColor: '#fff',
   },
-  button: {
-    marginBottom: 180, // Añade espacio entre los botones
+  banner: {
+    width: '100%',
+    padding: 20,
+    backgroundColor: '#3498db',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  bannerText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  buttonContainer: {
+    width: '100%',
+    marginBottom: 10, // Espacio entre botones
   },
 });
 

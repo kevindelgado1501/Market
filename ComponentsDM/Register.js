@@ -1,8 +1,11 @@
 import React from 'react';
-import {View, Text, TextInput, Button} from 'react-native';
+import { View, Text, TextInput, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import stylesRegister from '../styles/stylesRegister';
 
 const Register = () => {
+  const navigation = useNavigation(); 
+
   return (
     <View style={stylesRegister.container}>
       <Text style={stylesRegister.title}>Register</Text>
@@ -29,7 +32,7 @@ const Register = () => {
         secureTextEntry={true}
       />
 
-      {/* Campo de entrada para el numero de telefono */}
+      {/* Campo de entrada para el número de teléfono */}
       <TextInput
         style={stylesRegister.input}
         placeholder="Phone Number"
@@ -45,18 +48,18 @@ const Register = () => {
         secureTextEntry={true}
       />
 
-      {/* Campo de entrada para la dirección */}
+      {/* Campo de entrada para la edad */}
       <TextInput
         style={stylesRegister.input}
         placeholder="Age"
         placeholderTextColor="#999"
-        secureTextEntry={true}
+        keyboardType='numeric'
       />
 
       {/* Botón de registro */}
       <Button
         title="Register"
-        onPress={() => console.log('Login')}
+        onPress={() => navigation.navigate('Login')} 
         color={stylesRegister.button.backgroundColor} 
       />
     </View>
