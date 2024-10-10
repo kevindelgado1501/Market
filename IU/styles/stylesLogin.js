@@ -41,6 +41,7 @@ const stylesLogin = StyleSheet.create({
     color: '#333',
   },
   input: {
+    color : '#1C1B17',
     width: '100%',
     height: 40,
     borderColor: '#ccc',
@@ -52,7 +53,7 @@ const stylesLogin = StyleSheet.create({
   },
   buttonContainer: {
     width: '100%',
-    marginBottom: 10, // Space between buttons
+    marginBottom: 10, 
   },
 });
 

@@ -9,19 +9,17 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-
-    // Username validation: must be between 4 and 10 characters
-  const validateLogin = () => {  
+  const validateLogin = () => {
     if (username.length < 4 || username.length > 10) {
       Alert.alert('Invalid Username', 'Username must be between 4 and 10 characters.');
       return false;
     }
 
-    // Password validation: max 8 characters, one uppercase, one special char, letters, and numbers
-    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%?&])[A-Za-z\d@$!%?&]{1,8}$/;
+
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%?&])[A-Za-z\d@$!%?&]{1,8}$/;
 
     if (!password.match(passwordRegex)) {
-      Alert.alert('Invalid Password', 'Password must be up to 8 characters long, contain one uppercase letter, one special character, letters, and numbers.');
+      Alert.alert('Invalid Password', 'Password must be up to 8 characters long, contain one uppercase letter, one special character, and numbers.');
       return false;
     }
 
@@ -30,14 +28,14 @@ const Login = () => {
 
   const handleSignIn = () => {
     if (validateLogin()) {
-      // Redirect if validation passes
+
       navigation.navigate('Products');
     }
   };
 
   return (
     <View style={styles.container}>
-      {/* Banner */}
+
       <View style={styles.banner}>
         <Text style={styles.bannerText}>Welcome to Market Express' App</Text>
       </View>
@@ -48,10 +46,8 @@ const Login = () => {
           style={styles.logo}
         />
 
-        {/* Screen title */}
         <Text style={styles.title}>Login</Text>
 
-        {/* Username input field */}
         <TextInput
           style={styles.input}
           placeholder="User"
@@ -60,7 +56,6 @@ const Login = () => {
           onChangeText={setUsername}
         />
 
-        {/* Password input field */}
         <TextInput
           style={styles.input}
           placeholder="Password"
@@ -70,7 +65,6 @@ const Login = () => {
           onChangeText={setPassword}
         />
 
-        {/* Sign In button */}
         <View style={styles.buttonContainer}>
           <Button
             title="Sign In"
@@ -79,7 +73,6 @@ const Login = () => {
           />
         </View>
 
-        {/* Register button */}
         <View style={styles.buttonContainer}>
           <Button
             title="Register"

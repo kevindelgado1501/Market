@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-const stylesTv = StyleSheet.create({
+const stylesSounds = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
@@ -74,4 +74,4 @@ const stylesTv = StyleSheet.create({
   },
 });
 
-export default stylesTv;
+export default stylesSounds;

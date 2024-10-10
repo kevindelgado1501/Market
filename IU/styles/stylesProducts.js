@@ -5,7 +5,7 @@ const stylesProduct = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: '#dfe6f2',
   },
   productContainer: {
     marginBottom: 20,
@@ -26,24 +26,67 @@ const stylesProduct = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'transparent',
   },
+  viewMoreButton: {
+    marginTop: 10,
+    backgroundColor: '#ff6347',
+    paddingVertical: 8,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  viewMoreText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  descriptionContainer: {
+    marginTop: 10,
+    backgroundColor: '#fff',
+    padding: 10,
+    borderRadius: 8,
+  },
+  productDescription: {
+    fontSize: 16,
+    color: '#555',
+    textAlign: 'left',
+  },
   productName: {
     fontSize: 18,
     fontWeight: 'bold',
     marginTop: 10,
     color: '#333',
   },
-  productPrice: {
-    fontSize: 16,
-    color: '#888',
+  productImage: {
+    width: '100%',
+    height: 180,
+    borderRadius: 10,
+    resizeMode: 'contain',
+  },
+  priceContainer: {
+    flexDirection: 'row',
+    justifyContent: 'right',
+    alignItems: 'center',
     marginTop: 5,
+  },
+  productPriceOFF: {
+    fontSize: 16,
+    color: 'red',
+    marginTop: 5,
+    fontSize: 17,
+    paddingRight: 10,
+  },
+  productPrice: {
+    textDecorationLine: 'line-through',
+    fontSize: 16,
+    color: '#332F2C',
+    marginTop: 5,
+    fontSize: 14,
   },
   bannerImage: {
     width: '100%',
     height: 150,
     resizeMode: 'cover',
     marginBottom: 20,
+    marginTop: 12,
   }
-
 });
-
 export default stylesProduct;
